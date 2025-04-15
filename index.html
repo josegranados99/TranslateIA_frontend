@@ -6,61 +6,65 @@
     <title>Traductor</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
     <script src="./assets/js/date.js" defer></script>
-    <script src="./assets/js/message.js" defer></script>
+    <script src="./assets/js/message.js " defer></script>
     <script src="./assets/js/translate.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <!-- Header -->
-      <div class="header">
+      <!-- Head -->
+      <div class="head">
         <div class="avatar">
-          <img src="./assets/img/avatar.png" alt="avatar page" />
+          <img src="./assets/img/avatar.png" alt="avatar image" />
         </div>
         <div class="title1">
-          <span> Specialization in Software Development: Translate IA </span>
-          <span id="span-subtitle" class="title2"> Welcome </span>
+          <span> Specialization Software Development: AI Translator </span>
+          <span id="spn-subtitle" class="title2"> Welcome </span>
         </div>
       </div>
-      <!-- Header -->
+      <!-- Head -->
 
       <!-- Body -->
-      <div class="translete">
-        <div class="translate-container">
-          <span id= "span-body" class="span-body"> </span>
+      <div class="translator">
+        <div class="translator-container">
+          <span id="spn-body"> </span>
         </div>
         <form
-          id="frm-translate"
+          id="frm-translator"
           action="javascript:void(0)"
-          class="translate-fmr"
+          class="frm-translator"
         >
           <div class="icon">
-            <img src="./assets/img/icono.png" alt="icon page" />
+            <img src="./assets/img/icono.png" alt="red icon" />
           </div>
           <input
             id="input-text"
             type="text"
             class="translate-box"
-            placeholder="¿Qué deseas traducir?"
+            placeholder="¿What do you want to translate?"
             autocomplete="off"
             autofocus
           />
           <select id="cmb-language" class="cmb-language">
-            <option value="Inglés">Inglés</option>
-            <option value="Francés">Francés</option>
-            <option value="Alemán">Alemán</option>
-            <option value="Italiano">Italiano</option>
-            <option value="Portugués">Portugués</option>
-            <option value="Ruso">Ruso</option>
-            <option value="Chino">Chino</option>
-            <option value="Japonés">Japonés</option>
-            <option value="Árabe">Árabe</option>
-            <option value="Coreano">Coreano</option>
-            <option value="Español">Español</option>
+            <option value="Inglés">English</option>
+            <option value="Francés">French</option>
+            <option value="Alemán">German</option>
+            <option value="Italiano">Italian</option>
+            <option value="Portugués">Portuguese</option>
+            <option value="Ruso">Russian</option>
+            <option value="Chino">Chinese</option>
+            <option value="Japonés">Japanese</option>
+            <option value="Árabe">Arab</option>
+            <option value="Coreano">Korean</option>
+            <option value="Español">Spanish</option>
           </select>
           <span class="accept">
             <div class="send">
-              <img id="img-send" src="./assets/img/enviar.png" alt="send" />
+              <img
+                id="img-send"
+                src="./assets/img/enviar.png"
+                alt="send"
+              />
             </div>
           </span>
         </form>

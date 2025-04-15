@@ -10,18 +10,12 @@ const sendData = async () => {
 
   const imgSend = "<img src='../assets/img/entregado.png' alt='img send'/>";
   const textSend = document.createElement("div");
+  const textRecive = document.createElement("div");
 
   textSend.className = "text sent";
-  textSend.innerHTML =
-    textTranslate +
-    "<span class='metadata'><span class='hour'>" +
-    currentHour() +
-    "</span><span class='seen'>" +
-    imgSend +
-    "" +
-    "</span></span>";
+  textRecive.className = "text received";
 
-  workArea.append(textSend);
+  addMessage(textSend, textTranslate, imgSend);
 
   try {
     const response = await fetch("http://localhost:3123/api/v1/translate", {
@@ -40,23 +34,18 @@ const sendData = async () => {
 
     const data = await response.json();
     console.log(data);
-    
-    const textRecive = document.createElement("div");
 
-    textRecive.className = "text received";
-    textRecive.innerHTML =
-      data.translation +
-      "<span class='metadata'><span class='hour'>" +
-      currentHour() +
-      "</span></span>";
-
-    workArea.append(textRecive);
-
+    addMessage(textRecive, data.translation);
     translateContainer.scrollTop = translateContainer.scrollHeight;
 
     messageSubtitle(subtitle, "Online", 3000);
   } catch (error) {
     console.log("Error" + error);
+
+    addMessage(textRecive, "Error in translation, please try again.");
+    translateContainer.scrollTop = translateContainer.scrollHeight;
+
+    messageSubtitle(subtitle, "Online", 3000);
   }
 
   textBox.value = "";
